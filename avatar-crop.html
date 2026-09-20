@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="代子康个人主页图片裁剪与取景工具">
+  <meta name="theme-color" content="#0a0a0f">
+  <title>网站图片裁剪工具｜代子康</title>
+  <link rel="stylesheet" href="avatar-crop.css?v=20260920-complete-source">
+</head>
+<body>
+  <header class="tool-header">
+    <a class="back-link" href="index.html" aria-label="返回个人主页">
+      <span aria-hidden="true">←</span>
+      返回主页
+    </a>
+    <div>
+      <p>ABOUT-ME / IMAGE TOOL</p>
+      <h1>网站图片裁剪工具</h1>
+    </div>
+  </header>
+
+  <main class="tool-layout">
+    <section class="editor-panel" aria-labelledby="editor-title">
+      <div class="panel-heading">
+        <div>
+          <span class="step">01</span>
+          <h2 id="editor-title">选择图片与取景</h2>
+        </div>
+        <p id="editor-description">选择要调整的主页图片，再拖动或缩放画面。</p>
+      </div>
+
+      <div class="target-control">
+        <label for="crop-target">调整对象</label>
+        <select id="crop-target">
+          <optgroup label="主页图片">
+            <option value="avatar">顶部圆形头像</option>
+            <option value="about">关于本人照片</option>
+          </optgroup>
+          <optgroup label="项目经历图片">
+            <option value="perception">ELF3 人形 AMP 视觉越障</option>
+            <option value="12dof">12DOF 串联四足</option>
+            <option value="8dof">8DOF 并联四足</option>
+            <option value="arm">双臂 14DOF 机械臂</option>
+          </optgroup>
+        </select>
+        <p id="target-hint">圆形取景框与主页顶部头像一致。</p>
+      </div>
+
+      <div class="crop-workspace">
+        <div
+          id="crop-stage"
+          class="crop-stage crop-stage--circle"
+          tabindex="0"
+          role="application"
+          aria-label="可拖动的图片取景区域。使用方向键可微调图片位置。"
+        >
+          <img id="crop-image" src="kvoy_images/1.png?v=20260920-complete-source" alt="待调整图片">
+          <div class="crop-guide" aria-hidden="true">
+            <span class="guide-line guide-line--vertical"></span>
+            <span class="guide-line guide-line--horizontal"></span>
+          </div>
+        </div>
+        <p class="stage-tip">完整原图直接取景 · 拖动调整位置 · 滚轮或滑杆缩放</p>
+      </div>
+
+      <div class="controls">
+        <div class="file-control">
+          <label class="file-button" for="image-file">临时选择其他图片</label>
+          <input id="image-file" type="file" accept="image/png,image/jpeg,image/webp">
+          <span id="file-name">当前：kvoy_images/1.png</span>
+        </div>
+        <p class="file-note">临时图片仅用于试裁剪，不会自动替换工程文件；切换调整对象后会恢复工程图片。</p>
+
+        <div class="range-control">
+          <div class="control-label">
+            <label for="zoom-range">原图缩放（1.00× = 刚好铺满取景框）</label>
+            <output id="zoom-value" for="zoom-range">1.20×</output>
+          </div>
+          <div class="range-row">
+            <button id="zoom-out" class="icon-button" type="button" aria-label="缩小">−</button>
+            <input id="zoom-range" type="range" min="1" max="3" step="0.01" value="1.20">
+            <button id="zoom-in" class="icon-button" type="button" aria-label="放大">+</button>
+          </div>
+        </div>
+
+        <div class="position-readout" aria-label="当前偏移参数">
+          <div><span>水平偏移</span><strong id="x-value">-0.83%</strong></div>
+          <div><span>垂直偏移</span><strong id="y-value">-5.38%</strong></div>
+        </div>
+
+        <div class="control-actions">
+          <button id="center-button" class="secondary-button" type="button">偏移归零</button>
+          <button id="reset-button" class="secondary-button" type="button">恢复工程默认</button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="result-panel" aria-labelledby="result-title">
+      <div class="panel-heading">
+        <div>
+          <span class="step">02</span>
+          <h2 id="result-title">确认效果</h2>
+        </div>
+        <p id="preview-description">预览使用与主页当前图片相同的比例和取景规则。</p>
+      </div>
+
+      <div class="previews">
+        <div class="preview-item">
+          <div id="preview-large" class="image-preview image-preview--large image-preview--circle">
+            <img class="preview-image" src="kvoy_images/1.png?v=20260920-complete-source" alt="">
+          </div>
+          <span id="preview-large-label">放大预览</span>
+        </div>
+        <div class="preview-item">
+          <div id="preview-actual" class="image-preview image-preview--actual image-preview--circle">
+            <img class="preview-image" src="kvoy_images/1.png?v=20260920-complete-source" alt="">
+          </div>
+          <span id="preview-actual-label">主页尺寸 48 × 48</span>
+        </div>
+      </div>
+
+      <div class="code-block">
+        <div class="code-heading">
+          <label for="css-output">当前图片的永久 CSS 参数</label>
+          <button id="copy-button" type="button">复制 CSS</button>
+        </div>
+        <textarea id="css-output" rows="8" readonly spellcheck="false"></textarea>
+      </div>
+
+      <div class="result-actions">
+        <button id="apply-button" class="primary-button" type="button">应用当前图片并打开主页</button>
+        <button id="export-button" class="secondary-button" type="button">导出当前取景 PNG</button>
+        <button id="clear-button" class="text-button" type="button">清除当前图片的主页预览设置</button>
+      </div>
+
+      <div class="help-box">
+        <h3>保存方式</h3>
+        <ol>
+          <li>工具直接使用完整原图；1.00× 表示原图按比例刚好铺满取景框，继续放大才会让主体占据更多画面。</li>
+          <li>“应用当前图片并打开主页”会把这一张的参数保存在当前浏览器中，并跳到主页对应位置预览。</li>
+          <li>GitHub Pages 不会读取浏览器本地设置。要永久生效，请复制上方 CSS，替换 <code>style.css</code> 中同一选择器的三个变量。</li>
+          <li>选择其他本地图片只是试裁剪；若要更换主页原图，仍需把图片放入 <code>kvoy_images/</code> 并修改 <code>index.html</code> 的路径。</li>
+        </ol>
+      </div>
+
+      <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+    </aside>
+  </main>
+
+  <script src="js/avatar-crop.js?v=20260920-taller-project-images"></script>
+</body>
+</html>

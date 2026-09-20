@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="代子康的个人网页简历，专注机器人运动控制、强化学习与模仿学习。">
+<title>代子康 — 机器人运动控制</title>
+<link rel="stylesheet" href="style.css?v=20260920-home-background">
+</head>
+<body>
+
+<!-- Loading -->
+<div id="loading">
+  <div class="loading-ring"></div>
+  <span class="loading-avatar" aria-hidden="true">DK</span>
+</div>
+
+<!-- Nav -->
+<header id="header">
+  <nav class="nav" aria-label="主导航">
+    <ul>
+      <li><a href="#about">关于</a></li>
+      <li><a href="#works">项目</a></li>
+      <li class="nav-logo"><a href="#hero" aria-label="回到首页"><img src="kvoy_images/1.png?v=20260920-complete-source" alt="代子康" width="48" height="48"></a></li>
+      <li><a href="#skills">能力</a></li>
+      <li><a href="#contact">联系</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- Hero -->
+<section id="hero" class="section">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Hi，我是 代子康</h1>
+    <p class="hero-sub">擅长控制，喜欢机器人 ~</p>
+    <p class="hero-desc">想了解更多，往下滚动哦 ^_^</p>
+  </div>
+  <a href="#about" class="scroll-indicator" aria-label="向下滚动">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+  </a>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">关于本人</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="timeline">
+          <div class="tl-item fade-up">
+            <span class="tl-year">大一</span>
+            <span class="tl-dot"></span>
+            <span class="tl-desc">初识 robocon，学习机器人控制</span>
+          </div>
+          <div class="tl-item fade-up">
+            <span class="tl-year">大二</span>
+            <span class="tl-dot"></span>
+            <span class="tl-desc">深入控制，四足的 FreeRTOS + FSM 完成比赛</span>
+          </div>
+          <div class="tl-item fade-up">
+            <span class="tl-year">大三上</span>
+            <span class="tl-dot"></span>
+            <span class="tl-desc">开始研究强化学习（sim2real）</span>
+          </div>
+          <div class="tl-item fade-up">
+            <span class="tl-year">大三下</span>
+            <span class="tl-dot"></span>
+            <span class="tl-desc">人形机器人AMP/Perception</span>
+          </div>
+          <div class="tl-item fade-up">
+            <span class="tl-year">目前</span>
+            <span class="tl-dot tl-dot--current"></span>
+            <span class="tl-desc">MIMIC + 人形全身运动控制与模仿学习</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-photo fade-up">
+        <img src="kvoy_images/2.JPG?v=20260920-complete-source" alt="代子康个人照片" width="1892" height="2813" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Works -->
+<section id="works" class="section">
+  <div class="container">
+    <h2 class="section-title">项目经历</h2>
+    <div class="works-grid">
+      <article class="work-card fade-up">
+        <div class="work-img work-img--perception">
+          <img src="kvoy_images/perception2.PNG?v=20260920-project-images" alt="ELF3 人形机器人视觉越障项目" width="1170" height="2072" loading="lazy" decoding="async">
+        </div>
+        <div class="work-body">
+          <h3>ELF3 人形 AMP 视觉越障</h3>
+          <p>开发时间： 两个月</p>
+          <p>负责全流程推进深度图感知、算法开发、训练与部署</p>
+        </div>
+      </article>
+      <article class="work-card fade-up">
+        <div class="work-img work-img--12dof">
+          <img src="kvoy_images/12dof.jpg?v=20260920-complete-source" alt="12DOF 串联四足机器人" width="1500" height="1115" loading="lazy" decoding="async">
+        </div>
+        <div class="work-body">
+          <h3>12DOF 串联四足</h3>
+          <p>开发时间： 六个月</p>
+          <p>完全从0开始，完成盲走训练、实机部署，以及 Jetson、传感器、通信和 FSM 开发。</p>
+        </div>
+      </article>
+      <article class="work-card fade-up">
+        <div class="work-img work-img--8dof">
+          <img src="kvoy_images/8dof.JPG?v=20260920-complete-source" alt="8DOF 并联四足机器人" width="740" height="535" loading="lazy" decoding="async">
+        </div>
+        <div class="work-body">
+          <h3>8DOF 并联四足</h3>
+          <p>开发时间： 一年</p>
+          <p>FreeRTOS + FSM + 串级PID控制 + 运动学 + IMU + SBUS + CAN</p>
+        </div>
+      </article>
+      <article class="work-card fade-up">
+        <div class="work-img work-img--arm">
+          <img src="kvoy_images/arm3.PNG?v=20260920-project-images" alt="ELF3 双臂 14DOF 机械臂项目" width="795" height="461" loading="lazy" decoding="async">
+        </div>
+        <div class="work-body">
+          <h3>双臂 14DOF 机械臂</h3>
+          <p>开发时间： 一个月</p>
+          <p>MoveIt 2 + ROS 2 + KDL / OMPL</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">技能水平</h2>
+    <div class="skills-grid">
+      <div class="skill-tag fade-up">PPO 算法 &amp; 强化学习工作流</div>
+      <div class="skill-tag fade-up">并行训练 &amp; 策略迁移 &amp; 实机部署</div>
+      <div class="skill-tag fade-up">GMR / AMP / Mimic / Parkour</div>
+      <div class="skill-tag fade-up">TWIST / SONIC / HoloMotion</div>
+      <div class="skill-tag fade-up">论文复现 & 前沿算法跟进</div>
+      <div class="skill-tag fade-up">Isaac Gym / Isaac Sim / MuJoCo / MJLab</div>
+      <div class="skill-tag fade-up">URDF / MJCF 建模与调试</div>
+      <div class="skill-tag fade-up">上下层通讯 & Debug</div>
+      <div class="skill-tag fade-up">Python / C / C++</div>
+      <div class="skill-tag fade-up">ROS 2</div>
+      <div class="skill-tag fade-up">VSCode / CLion / Keil / 仿真</div>
+      <div class="skill-tag fade-up">全栈技术沟通 & 跨部门协作</div>
+      <div class="skill-tag fade-up">Git 版本管理 &amp; 工程协作</div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">联系本人</h2>
+    <div class="contact-grid">
+      <div class="contact-card fade-up">
+        <h3>联系方式</h3>
+        <ul>
+          <li>邮箱：<a href="mailto:3445382462@qq.com">3445382462@qq.com</a></li>
+          <li>电话：<a href="tel:19252761756">19252761756</a></li>
+          <li>微信：Psyche_Cultivating</li>
+          <li>GitHub：<a href="https://github.com/kvoy202311" target="_blank" rel="noopener noreferrer">kvoy202311</a></li>
+        </ul>
+      </div>
+      <div class="contact-card fade-up">
+        <h3>本站声明</h3>
+        <p>本站展示的资料及视频未经许可请勿商用</p>
+        <p>联系方式仅用于学习、科研及工作交流</p>
+        <p>机械 / 硬件也可联系我</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="js/global.js?v=20260920-navigation-fix"></script>
+</body>
+</html>
