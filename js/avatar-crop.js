@@ -108,16 +108,16 @@
       downloadName: '8dof-cropped.png',
       hash: 'works'
     },
-    arm: {
-      label: '双臂 14DOF 机械臂',
-      selector: '.work-img--arm img',
-      image: 'kvoy_images/arm3.PNG',
+    mimic: {
+      label: 'ELF3 人形 Mimic 运动跟踪',
+      selector: '.work-img--mimic img',
+      image: 'kvoy_images/mimic.png',
       defaultState: { x: 0, y: 0, scale: 1 },
       aspect: 38 / 27,
       circle: false,
       stageWidth: 500,
       positionX: 0.5,
-      positionY: 0.5,
+      positionY: 0.33,
       largePreviewWidth: 220,
       actualPreviewWidth: 152,
       actualLabel: '主页卡片比例 304 × 216',
@@ -125,7 +125,7 @@
       description: '预览与主页项目卡片采用相同的横向比例和图片定位。',
       outputWidth: 1216,
       outputHeight: 864,
-      downloadName: 'arm-cropped.png',
+      downloadName: 'mimic-cropped.png',
       hash: 'works'
     }
   };

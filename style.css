@@ -360,11 +360,11 @@ main {
   --crop-scale: 1.1;
   object-position: center 53%;
 }
-.work-img--arm img {
-  --crop-x: -11.17%;
-  --crop-y: -12.60%;
-  --crop-scale: 1.40;
-  object-position: center 50%; 
+.work-img--mimic img {
+  --crop-x: 0%;
+  --crop-y: 0%;
+  --crop-scale: 1;
+  object-position: center 33%;
 }
 .work-card:hover .work-img img { filter: brightness(1.08); }
 

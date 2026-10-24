@@ -26,7 +26,7 @@ var cropTargets = {
   perception: { selector: '.work-img--perception img', positionX: 0.5, positionY: 0.38 },
   '12dof': { selector: '.work-img--12dof img', positionX: 0.5, positionY: 1 },
   '8dof': { selector: '.work-img--8dof img', positionX: 0.5, positionY: 0.53 },
-  arm: { selector: '.work-img--arm img', positionX: 0.5, positionY: 0.5 }
+  mimic: { selector: '.work-img--mimic img', positionX: 0.5, positionY: 0.33 }
 };
 var savedImageCrops = {};
 
